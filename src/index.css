@@ -1,5 +1,10 @@
+.ubuntu {
+  font-family: "Ubuntu", serif;
+}
+
 .header-title {
   text-align: center;
+  font-size: 60px;
 }
 
 .hero-image {
@@ -16,6 +21,32 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero-text {
+.hero-section {
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Vertically center elements */
+  align-items: center; /* Horizontally center elements */
+  height: 500px; /* Full height of the section */
   text-align: center;
+  background-color: #f9f9f9; /* Optional: Add background color */
+}
+
+.quiz-button {
+  padding: 10px 20px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.quiz-button:hover {
+  background-color: #3730a3;
+}
+
+.description {
+  padding: 50px 300px;
 }
