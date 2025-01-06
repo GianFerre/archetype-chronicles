@@ -1,15 +1,34 @@
-import './index.css'
-import AC from "./assets/AC.png"
-import warrior from "./assets/warrior.png"
-import mage from "./assets/mage.png"
+import './index.css';
+import AC from "./assets/AC-logo.png"; // Assuming this is your logo path
+import warrior from "./assets/warrior.png";
+import mage from "./assets/mage.png";
 
 function App() {
   // Click handler for the button
   const handleQuizClick = () => {
     alert('Quiz starting soon!'); // You can replace this with navigation or functionality
   };
+
   return (
     <>
+      <nav className="navbar">
+        <div className="logo">
+          <a href="#home">
+            <img src={AC} alt="Archetype Chronicles Logo" className="navbar-logo" />
+          </a>
+        </div>
+        <ul className="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#quiz">Quiz</a></li>
+          <li><a href="#archetypes">Archetypes</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div className="cta-button">
+          <a href="#quiz">Take Your Quiz</a>
+        </div>
+      </nav>
+
       <div className='ubuntu hero-section'>
         <h1 className="ubuntu header-title">Archetype Chronicles</h1>
         <h3 className='ubuntu'>Unlock the Secrets of Your Character.</h3>
@@ -26,7 +45,7 @@ function App() {
         </p>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

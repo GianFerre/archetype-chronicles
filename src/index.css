@@ -1,10 +1,102 @@
-.ubuntu {
-  font-family: "Ubuntu", serif;
+/* Navbar */
+
+/* Navbar Logo */
+.navbar-logo {
+  height: 75px; /* Adjust the size to fit the navbar */
+  width: auto;
+  margin-right: 15px; /* Adds spacing between the logo and text */
+  border-radius: 5%; /* Optional: gives the logo rounded edges */
+}
+
+.navbar .logo a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo img:hover {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+  transition: transform 0.3s ease;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white; /* Changed to white for consistency */
+  border-bottom: 2px solid #eaeaea; /* Subtle border to separate navbar */
+  position: sticky; /* Sticks to the top of the page */
+  top: 0;
+  z-index: 100;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black; /* Changed to black for readability */
+  font-family: 'Ubuntu', sans-serif; /* Same as hero font for consistency */
+  font-size: 18px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav-links li a:hover {
+  border-bottom: 2px solid #6a0dad; /* Purple underline hover effect */
+}
+
+.cta-button a {
+  background-color: #6a0dad; /* Purple button for consistency */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button a:hover {
+  background-color: #5a0080; /* Darker purple on hover */
+  box-shadow: 0 4px 10px rgba(106, 0, 173, 0.5);
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Vertically center elements */
+  align-items: center; /* Horizontally center elements */
+  height: 500px; /* Full height of the section */
+  text-align: center;
+  background-color: #f9f9f9; /* Light background color for consistency */
 }
 
 .header-title {
   text-align: center;
   font-size: 60px;
+  color: black;
+  font-family: 'Ubuntu', serif; /* Consistent typography */
+}
+
+.quiz-button {
+  padding: 12px 24px;
+  background-color: #6a0dad; /* Purple button for consistency */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quiz-button:hover {
+  background-color: #5a0080;
+  box-shadow: 0 4px 10px rgba(106, 0, 173, 0.5);
 }
 
 .hero-image {
@@ -21,32 +113,33 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero-section {
-  display: flex; /* Enable flexbox */
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Vertically center elements */
-  align-items: center; /* Horizontally center elements */
-  height: 500px; /* Full height of the section */
-  text-align: center;
-  background-color: #f9f9f9; /* Optional: Add background color */
-}
-
-.quiz-button {
-  padding: 10px 20px;
-  background-color: #4f46e5;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.quiz-button:hover {
-  background-color: #3730a3;
-}
-
+/* Description */
 .description {
-  padding: 50px 300px;
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #555;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide links for mobile */
+  }
+
+  .hamburger-menu {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #eaeaea;
+  }
+}
+
