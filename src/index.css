@@ -1,3 +1,20 @@
+/* Reset margin and padding to avoid extra spacing */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app-container {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack header, main content, and footer */
+}
+
+.content {
+  flex-grow: 1; /* Makes the content take up available space to push the footer down */
+}
+
 /* Navbar */
 
 /* Navbar Logo */
@@ -48,6 +65,10 @@
   border-bottom: 2px solid #6a0dad; /* Purple underline hover effect */
 }
 
+.cta-button {
+  display: block; /* Displayed as a normal button on desktop */
+}
+
 .cta-button a {
   background-color: #6a0dad; /* Purple button for consistency */
   color: white;
@@ -62,6 +83,27 @@
 .cta-button a:hover {
   background-color: #5a0080; /* Darker purple on hover */
   box-shadow: 0 4px 10px rgba(106, 0, 173, 0.5);
+}
+
+/* Hamburger menu icon (visible on mobile only) */
+.hamburger-menu {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  margin-right: 0; /* Ensure the hamburger aligns properly */
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  z-index: 1000;
 }
 
 /* Hero Section */
@@ -121,6 +163,20 @@
   color: #555;
 }
 
+/* Footer */
+.footer {
+  background-color: #f9f9f9;
+  text-align: center;
+  padding: 20px 0;
+  color: #333;
+  font-size: 14px;
+  border-top: 1px solid #ddd;
+}
+
+.footer p {
+  margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-links {
@@ -129,8 +185,12 @@
 
   .hamburger-menu {
     display: block;
-    font-size: 24px;
-    cursor: pointer;
+    margin-left: auto; /* Align the hamburger to the right */
+    margin-right: 20px;
+  }
+
+  .cta-button a {
+    display: none; /* Hide the quiz button on mobile to avoid clutter */
   }
 
   .nav-links.active {
@@ -142,4 +202,3 @@
     border: 1px solid #eaeaea;
   }
 }
-
